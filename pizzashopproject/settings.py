@@ -25,7 +25,7 @@ SECRET_KEY = 'w5g8ian(vjaj6a+&0ug+!tm6d2fn&)+#d3=z(wwg$vm$3-$h%#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fastfoodshop.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -134,6 +134,12 @@ LOGIN_REDIRECT_URL = '/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
