@@ -25,7 +25,7 @@ SECRET_KEY = 'w5g8ian(vjaj6a+&0ug+!tm6d2fn&)+#d3=z(wwg$vm$3-$h%#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fastfoodshop.herokuapp.com', 'localhost', '127.0.0.1', '[::1]']
+ALLOWED_HOSTS = ['fastfoodshop.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
